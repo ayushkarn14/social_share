@@ -16,7 +16,8 @@ function List() {
             students.push({
                 name: doc.data().name,
                 linkedin: doc.data().linkedin,
-                instagram: doc.data().instagram
+                instagram: doc.data().instagram,
+                github: doc.data().github,
             })
             setStudents(students);
         });
@@ -27,7 +28,7 @@ function List() {
     return (<div>
 
         {students_list.map(item => (
-            <Card key={i++} name={item.name} instagram={item.instagram} linkedin={item.linkedin} />
+            <Card key={i++} name={item.name} instagram={item.instagram} linkedin={item.linkedin} github={item.github} />
         )
         )}
     </div>
